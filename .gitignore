@@ -7,3 +7,6 @@ dist/
 .vscode/
 .idea/
 coverage/
+workspaces/
+pipeline-pool.md
+PIPELINE_NOTES.md
