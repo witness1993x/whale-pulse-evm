@@ -1,0 +1,54 @@
+{
+  "name": "whale-pulse-evm",
+  "version": "0.1.0",
+  "description": "Real-time multichain EVM (Ethereum / Polygon / BSC / Arbitrum) large-transfer + whale-wallet radar powered by ChainStream Transfers, with optional Claude AI reasoning.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "whale-pulse": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    ".env.example"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/index.ts",
+    "scan": "tsx src/index.ts scan",
+    "test": "node --test --import tsx test/*.test.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "evm",
+    "ethereum",
+    "polygon",
+    "bsc",
+    "arbitrum",
+    "chainstream",
+    "graphql",
+    "whale-tracking",
+    "onchain-analytics",
+    "claude",
+    "ai-agent"
+  ],
+  "author": "witness1993x",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.6.3"
+  },
+  "peerDependencies": {
+    "@anthropic-ai/sdk": "^0.73.0"
+  },
+  "peerDependenciesMeta": {
+    "@anthropic-ai/sdk": {
+      "optional": true
+    }
+  }
+}
